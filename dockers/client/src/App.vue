@@ -13,10 +13,9 @@ export default {
       message :'ハローワールド'
           }
   }
-  
 }
 
-alert('アラートです')
+// alert('アラートです')
 </script>
 
 <style>

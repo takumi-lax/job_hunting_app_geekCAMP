@@ -1,5 +1,5 @@
 build:
   docker:
-    web: Dockerfile
+    web: /dockers/client/Dockerfile
 run:
   web: /main
