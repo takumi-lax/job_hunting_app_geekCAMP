@@ -1,5 +1,6 @@
 const express = require('express');
 const serveStatic = require("serve-static")
+var errorhandler = require('errorhandler');
 const path = require('path');
 app = express();
 app.use(serveStatic(path.join(__dirname, 'dist')));
