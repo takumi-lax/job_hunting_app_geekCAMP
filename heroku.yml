@@ -2,4 +2,4 @@ build:
   docker:
     web: /dockers/client/Dockerfile
 run:
-  web: /main
+  web: /app
