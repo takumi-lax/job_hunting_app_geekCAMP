@@ -1,5 +1,6 @@
 build:
   docker:
     web: /dockers/client/Dockerfile
+    worker: /dockers/server/Dockerfile
 run:
-  web: /app
+  web: yarn run start
