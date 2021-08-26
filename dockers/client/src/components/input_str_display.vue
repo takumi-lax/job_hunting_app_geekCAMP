@@ -14,7 +14,7 @@ export default {
     return {
       name: '',
       display_name :'',
-      button_name:'出力'
+      button_name:'表示'
     }
   },
   methods: {
