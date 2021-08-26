@@ -2,6 +2,8 @@
 
   <div id="app">
     <h1>{{ message }}</h1>
+    <a href="https://www.google.co.jp/maps/?hl=ja">自分で調べてください</a>
+    <a href="#" class="btn-flat-border">BUTTON</a>
   </div>
 
 </template>
@@ -10,12 +12,13 @@
 export default {
   data(){
     return {
-      message :'ハローワールド'
+      message :'google map'
           }
   }
+  
 }
 
-// alert('アラートです')
+alert('アラートです')
 </script>
 
 <style>
@@ -26,5 +29,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  @import "./css/styles.css";
 }
 </style>
