@@ -1,24 +1,28 @@
 <template>
-
-  <div id="app">
-    <h1>{{ message }}</h1>
-    <a href="https://www.google.co.jp/maps/?hl=ja">自分で調べてください</a>
-    <a href="#" class="btn-flat-border">BUTTON</a>
+  <div>
+  <alertBotton buttonname='Hello'/>
+  <displaybotton button_name='Hello'/>
   </div>
-
 </template>
 
 <script>
+import Textinput from './components/Textinput.vue'
+import alertBotton from './components/alertbutton.vue'
+import displaybotton from './components/input_str_display.vue'
+import HelloWorld from './components/HelloWorld.vue'
+
+
 export default {
-  data(){
-    return {
-      message :'google map'
-          }
+  name: 'App',
+  components: {
+    Textinput,
+    alertBotton,
+    displaybotton,
+    HelloWorld,
+    
   }
-  
 }
 
-alert('アラートです')
 </script>
 
 <style>
@@ -26,7 +30,7 @@ alert('アラートです')
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
   @import "./css/styles.css";
