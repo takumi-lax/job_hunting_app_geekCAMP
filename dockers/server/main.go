@@ -24,17 +24,15 @@ func main() {
     r.POST("/",func(c *gin.Context) {
         // var NAG NameAndGeo
         var N InputCompany
-        fmt.Println(c)
+        // fmt.Println(c)
         c.BindJSON(&N)
-        fmt.Println(N.Name)
+        // fmt.Println(N.Name)
         data := textserch.Textserch(N.Name,tokenread())
         data2 := nearbyserch.Nearbyserch(data.Lat,data.Lng,"1500","restaurant",tokenread())
         // textserch.Textserch(N)
         c.JSON(200, gin.H{
-            "Name": data2.Name,
-            "Lat": data2.Lat,
-            "Lng": data2.Lng,
-
+            "Company": data,
+            "restaurant": data2,
         })
     })
     r.Run(":8888")

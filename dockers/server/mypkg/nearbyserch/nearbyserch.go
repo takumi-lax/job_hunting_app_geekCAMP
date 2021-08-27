@@ -40,7 +40,7 @@ func Nearbyserch(Lat float64,Lng float64,radius string,typ string,key string) (d
     location := geometry["location"].(map[string]interface{})
     lat := location["lat"]
     lng := location["lng"]
-    fmt.Println(Name,lat, lng)
+    // fmt.Println(Name,lat, lng)
 	var inf data
 	inf.Name = Name.(string)
 	inf.Lat = lat.(float64)

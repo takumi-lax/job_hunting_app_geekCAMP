@@ -2,7 +2,7 @@ package textserch
 
 import (
 	"context"
-	"fmt"
+	// "fmt"
 
 	// "encoding/json"
 	// nearbyserch "getmapinfo/mypkg/nearbyserch"
@@ -21,6 +21,7 @@ func Textserch(name string,KEY string) (data) {
 	}
 	r := &maps.TextSearchRequest{
 		Query: name,
+		// Type: "university",
 	}
 
 	res, err := c.TextSearch(context.Background(), r)
@@ -30,11 +31,11 @@ func Textserch(name string,KEY string) (data) {
 
 	// pretty.Println(res)
 	var gmapinfo data
-	fmt.Println(res.Results[0].Name)
-	for _, result := range res.Results {
-		fmt.Println(result.Geometry.Location)
-		// fmt.Println(resu)
-	}
+	// fmt.Println(res.Results[0].Name)
+	// for _, result := range res.Results {
+	// 	// fmt.Println(result.Geometry.Location)
+	// 	// fmt.Println(resu)
+	// }
 	gmapinfo.Name = res.Results[0].Name
 	gmapinfo.Lat = res.Results[0].Geometry.Location.Lat
 	gmapinfo.Lng = res.Results[0].Geometry.Location.Lng
