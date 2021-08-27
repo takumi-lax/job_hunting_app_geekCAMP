@@ -1,22 +1,18 @@
 <template>
 <div class="hello">
     <!-- `greet` は、あらかじめ定義したメソッドの名前 -->
-    <button v-on:click="greet" class="btn-flat-border">{{ buttonname }}</button>
+    <button v-on:click="greet" class="btn-flat-border">{{ button_name }}</button>
 </div>
 </template>
 
 <script>
 export default {
   name: 'alertButton',
-  data () {
-    return {
-      buttonname: 'button'
-    }
-  },
+  props: ['button_name'],
   methods: {
   greet: function (event) {
     // メソッド内の `this` は、 Vue インスタンスを参照します
-    alert('Hello ' + this.buttonname + '!')
+    alert('Hello ' + this.button_name + '!')
     // `event` は、ネイティブ DOM イベントです
     if (event) {
       alert(event.target.tagName)

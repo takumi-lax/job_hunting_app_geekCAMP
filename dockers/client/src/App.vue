@@ -1,7 +1,7 @@
 <template>
   <div>
-  <alertBotton buttonname='Hello'/>
-  <displaybotton button_name='Hello'/>
+  <alertBotton button_name='Hello'/>
+  <displaybotton button_name='abc'/>
   </div>
 </template>
 
@@ -19,7 +19,6 @@ export default {
     alertBotton,
     displaybotton,
     HelloWorld,
-    
   }
 }
 

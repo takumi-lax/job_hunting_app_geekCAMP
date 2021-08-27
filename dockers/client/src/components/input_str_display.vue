@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- `greet` は、あらかじめ定義したメソッドの名前 -->
-    <input type="text" v-model="name" >
+    <input type="text" v-model="name">
     <button v-on:click="display" class="btn-flat-border">{{ button_name }}</button>
     {{ display_name }}
   </div>
@@ -10,24 +10,19 @@
 <script>
 export default {
   name: 'displaybotton',
+  props: ['button_name'],
   data () {
     return {
       name: '',
       display_name :'',
-      button_name:'テキスト表示'
     }
   },
   methods: {
     display: function() {
       this.display_name = this.name
     },
-    },
-  computed: {
-    button_name: function () {
-      return this.button_name
-    }
- }
   }
+}
 </script>
 
 <style>
