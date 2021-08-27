@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     display: function() {
-      alert(process.env.APP_ID);
+      alert(process.env.Google_API_KEY)
       this.display_name = this.name
     },
   }

@@ -9,10 +9,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-
+// console.log(process.env.Google_API_KEY)
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
-
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
@@ -47,8 +46,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        APP_ID: JSON.stringify(process.env.APP_ID),
-        API_KEY: JSON.stringify(process.env.API_KEY)
+        Google_API_KEY: process.env.Google_API_KEY
       }
     }),
     new webpack.HotModuleReplacementPlugin(),
