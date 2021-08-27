@@ -11,6 +11,7 @@
 export default {
   name: 'displaybutton',
   props: ['button_name'],
+  serch_name: ''
   data () {
     return {
       name: '',
@@ -19,7 +20,9 @@ export default {
   },
   methods: {
     display: function() {
-      this.display_name = this.name
+      
+      this.name
+
     },
   }
 }

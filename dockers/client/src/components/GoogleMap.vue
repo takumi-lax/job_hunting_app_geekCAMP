@@ -3,8 +3,6 @@
 <div>
 <h1>Google Map</h1>
 
-
-
 <div ref="map" style="height:500px;width:1000px;"></div>
 
 </div>
