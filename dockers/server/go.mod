@@ -1,4 +1,4 @@
-module test
+module server
 
 go 1.17
 
@@ -17,5 +17,12 @@ require (
 	github.com/ugorji/go/codec v1.1.7 // indirect
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
 	golang.org/x/sys v0.0.0-20200116001909-b77594299b42 // indirect
+	googlemaps.github.io/maps v1.3.2
 	gopkg.in/yaml.v2 v2.2.8 // indirect
+)
+
+require (
+	github.com/google/uuid v1.1.1 // indirect
+	go.opencensus.io v0.22.3 // indirect
+	golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1 // indirect
 )
