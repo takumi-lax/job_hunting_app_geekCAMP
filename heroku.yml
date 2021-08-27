@@ -3,4 +3,4 @@ build:
     web: /dockers/client/Dockerfile
     worker: /dockers/server/Dockerfile
 run:
-  web: yarn run dev
+  web: yarn run start
