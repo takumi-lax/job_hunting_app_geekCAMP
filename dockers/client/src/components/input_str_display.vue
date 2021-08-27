@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     display: function() {
-      alert(process.env.Google_API_KEY)
       this.display_name = this.name
     },
   }
