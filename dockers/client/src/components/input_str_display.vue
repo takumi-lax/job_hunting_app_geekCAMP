@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='displayButton'>
     <!-- `greet` は、あらかじめ定義したメソッドの名前 -->
     <input type="text" v-model="name">
     <button v-on:click="display" class="btn-flat-border">{{ button_name }}</button>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'displaybotton',
+  name: 'displaybutton',
   props: ['button_name'],
   data () {
     return {
@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     display: function() {
+      alert(process.env.APP_ID);
       this.display_name = this.name
     },
   }
@@ -26,13 +27,5 @@ export default {
 </script>
 
 <style>
-#alertBotton {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  @import "../css/styles.css";
-}
+
 </style>
