@@ -28,11 +28,11 @@ func main() {
         c.BindJSON(&N)
         // fmt.Println(N.Name)
         data := textserch.Textserch(N.Name,tokenread())
-        data2 := nearbyserch.Nearbyserch(data.Lat,data.Lng,"1500","restaurant",tokenread())
+        datas := nearbyserch.Nearbyserch(data.Lat,data.Lng,"1500","restaurant",tokenread())
         // textserch.Textserch(N)
         c.JSON(200, gin.H{
             "Company": data,
-            "restaurant": data2,
+            "restaurant": datas,
         })
     })
     r.Run(":8888")
