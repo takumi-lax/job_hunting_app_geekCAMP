@@ -4,3 +4,4 @@ build:
     worker: /dockers/server/Dockerfile
 run:
   web: yarn run start
+  worker: go run main.go

@@ -19,9 +19,11 @@ require (
 	golang.org/x/sys v0.0.0-20200116001909-b77594299b42 // indirect
 	googlemaps.github.io/maps v1.3.2
 	gopkg.in/yaml.v2 v2.2.8 // indirect
+
 )
 
 require (
+	github.com/gin-contrib/cors v1.3.1 // indirect
 	github.com/google/uuid v1.1.1 // indirect
 	go.opencensus.io v0.22.3 // indirect
 	golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1 // indirect

@@ -1,10 +1,8 @@
 
 <template>
 <div>
-<h1>Google Map</h1>
-
-<div ref="map" style="height:500px;width:1000px;"></div>
-
+      <div ref="map" style="height:600px;width:1300px;margin-left:auto;margin-right:auto;" ></div>
+      <button v-on:click="dis" class="btn-flat-border">{{ button_name }}</button>
 </div>
 </template>
 
@@ -29,6 +27,8 @@
 } */}
 
 export default {
+  name:'GoogleMap',
+  props: ['s_data'],
   data(){
     return {
       map:'',
@@ -37,7 +37,7 @@ export default {
       myLatLng3:{lat: 35.862, lng: 139.606},
     }
   },
-  mounted(){
+  mounted() {
     let script = document.createElement('script');
     script.src = process.env.Google_API_KEY;
     script.async = true;
@@ -46,6 +46,7 @@ export default {
       if(window.google){
         clearInterval(timer);
         this.map = new window.google.maps.Map(this.$refs.map, {
+          // center: {lat: this.$parent.search_data.Lat, lng:this.$parent.search_data.Lng},
           center: this.myLatLng,
           zoom: 18,
 
@@ -56,12 +57,32 @@ export default {
 
         });
         new window.google.maps.Marker({position:this.myLatLng,map:this.map})
-        new window.google.maps.Marker({position:this.myLatLng2,map:this.map})
-        new window.google.maps.Marker({position:this.myLatLng3,map:this.map})
+        // new window.google.maps.Marker({position:this.myLatLng2,map:this.map})
+        // new window.google.maps.Marker({position:this.myLatLng3,map:this.map})
       }
-    }, 500)
+    }, 500)},
 
+  methods: {
+  //   isNavigatorAvailable: () => {
+  //   return navigator.geolocation;
+  // },
+      
+      dis : function() {
+
+        // console.log('update center: ', this.lat, this.lng, this);
+          console.log(this.$parent.search_data)
+          alert(this.$parent.search_data.Lat)
+          this.map.setCenter({lat: this.$parent.search_data.Lat, lng:this.$parent.search_data.Lng});
+          this.map.Maker.setPosition({lat: this.$parent.search_data.Lat, lng:this.$parent.search_data.Lng});
+    
+  }
   }
 }
 
 </script>
+
+<style>
+.center {
+  text-align:center
+}
+</style>
